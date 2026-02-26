@@ -9,7 +9,9 @@
 
 Dyslexify investigates typographic attacks on CLIP-based vision-language models. It trains linear probes to detect typographic content, computes a typographic attention score, builds a circuit using a greedy selection strategy, and evaluates zero-shot classification robustness.
 
-## Installation
+[[📄 Paper]](https://openreview.net/forum?id=HNGEzXwbJw) [[🌐 Project Page]](https://hufe.info/dyslexify)
+
+## 🔧 Installation
 
 We recommend using [uv](https://github.com/astral-sh/uv) to install the dependencies:
 
@@ -18,7 +20,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync
 ```
 
-## Usage
+## 🚀 Usage
 
 The main entry point is `orchestrator.py`, which runs the full pipeline:
 
@@ -39,16 +41,20 @@ uv run orchestrator.py --model vit-l --device cuda:0 --mode cls
 | `--device` | `cuda:0` | any valid torch device                                                   |
 | `--mode`   | `cls`    | `cls`, `spatial`                                                         |
 
-## Datasets
+## 📊 Datasets
 
 See [`dyslexify/dataset/readme.md`](dyslexify/dataset/readme.md) for instructions on where to obtain each dataset.
 
-## Issues
+## 🐛 Issues
 
 If you run into any problems, feel free to open a [GitHub issue](https://github.com/lowlorenz/dyslexify/issues).
 
 
-```
+## 📝 Citation
+
+If you find this work useful, please cite our paper:
+
+```bibtex
 @inproceedings{hufe2026dyslexify,
     title={Dyslexify: A Mechanistic Defense Against Typographic Attacks in CLIP},
     author={Hufe, Lorenz and Venhoff, Constantin and Dreyer, Maximilian
