@@ -1,0 +1,38 @@
+[project]
+name = "dislexify2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "accelerate>=1.9.0",
+    "clip>=0.2.0",
+    "datasets>=4.0.0",
+    "huggingface>=0.0.1",
+    "ipykernel>=6.30.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.5",
+    "nnsight>=0.4.11",
+    "open-clip-torch>=3.0.0",
+    "overcomplete>=0.2.8",
+    "paddleocr>=3.3.1",
+    "safetensors>=0.5.3",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+    "torch>=2.7.1",
+    "tqdm>=4.67.1",
+    "transformers>=4.54.1",
+    "wandb>=0.21.1",
+]
+
+[project.optional-dependencies]
+ui = [
+    "fastapi==0.104.1",
+    "uvicorn[standard]==0.24.0",
+    "pydantic>=2.9.0",
+    "requests>=2.31.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["dyslexify*", "experiments*"]
+exclude = ["tests*", "notebooks*", "results*", "docs*"]
